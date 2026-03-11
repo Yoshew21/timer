@@ -1,0 +1,8 @@
+services:
+  timer:
+    build: .
+    image: timer:latest
+    container_name: timer
+    restart: unless-stopped
+    ports:
+      - "10000:80"

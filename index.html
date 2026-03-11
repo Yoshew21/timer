@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown — 25 sept. 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a0a00;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #f5e6d0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #a07050;
+            margin-bottom: 48px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* --- Ligne résumé --- */
+        .resume {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            justify-content: center;
+            gap: 12px 40px;
+            margin-bottom: 52px;
+        }
+
+        .resume-bloc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .resume-valeur {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e8a060;
+        }
+
+        .resume-label {
+            font-size: 0.7rem;
+            color: #7a5035;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .resume-sep {
+            font-size: 1.6rem;
+            color: #4a2a10;
+            align-self: center;
+            padding-bottom: 20px;
+        }
+
+        /* --- Timer principal --- */
+        .timer {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .bloc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .valeur {
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1;
+            min-width: 130px;
+            background: #2c1200;
+            border: 1px solid #6b3a18;
+            border-radius: 16px;
+            padding: 24px 16px;
+            letter-spacing: -2px;
+            color: #ffcc88;
+            box-shadow: 0 4px 24px rgba(200, 100, 20, 0.15);
+        }
+
+        .label {
+            font-size: 0.75rem;
+            color: #7a5035;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .separateur {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #6b3a18;
+            align-self: flex-start;
+            margin-top: 20px;
+        }
+
+        .ecoule {
+            font-size: 2rem;
+            color: #a07050;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vendredi 25 septembre 2026 — 17h00</h1>
+        <div class="resume" id="resume"></div>
+        <div class="timer" id="timer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
