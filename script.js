@@ -63,5 +63,7 @@ function tickAllTimers() {
     });
 }
 
-setInterval(tickAllTimers, 1000);
-tickAllTimers();
+document.addEventListener("DOMContentLoaded", () => {
+    setInterval(tickAllTimers, 1000);
+    tickAllTimers();
+});
