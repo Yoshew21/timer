@@ -1,13 +1,11 @@
-const targetDate = new Date('2026-09-25T17:00:00+02:00');
 
 function pad(n) {
     return String(n).padStart(2, '0');
 }
 
-function updateTimer() {
+function updateTimer(targetDate, el) {
     const now  = new Date();
     const diff = targetDate - now;
-    const el   = document.getElementById('timer');
 
     if (diff <= 0) {
         el.innerHTML = '<span class="ecoule">🎉 C\'est le jour J !</span>';
@@ -42,5 +40,28 @@ function updateTimer() {
     `;
 }
 
-setInterval(updateTimer, 1000);
-updateTimer();
+// Dates cibles
+const timers = [
+    {
+        id: 'timer-exam',
+        date: new Date('2026-06-12T17:00:00+02:00'),
+    },
+    {
+        id: 'timer-these',
+        date: new Date('2026-06-30T17:00:00+02:00'),
+    },
+    {
+        id: 'timer-etudes',
+        date: new Date('2026-09-25T17:00:00+02:00'),
+    },
+];
+
+function tickAllTimers() {
+    timers.forEach(t => {
+        const el = document.getElementById(t.id);
+        if (el) updateTimer(t.date, el);
+    });
+}
+
+setInterval(tickAllTimers, 1000);
+tickAllTimers();
